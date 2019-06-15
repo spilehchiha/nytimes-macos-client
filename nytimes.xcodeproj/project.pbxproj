@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480FD55F22B5984100711C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C8750622B5900100C41026 /* Main.storyboard */; };
 		48C8750122B5900100C41026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8750022B5900100C41026 /* AppDelegate.swift */; };
 		48C8750322B5900100C41026 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8750222B5900100C41026 /* ViewController.swift */; };
-		48C8750522B5900100C41026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C8750422B5900100C41026 /* Assets.xcassets */; };
-		48C8750822B5900100C41026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C8750622B5900100C41026 /* Main.storyboard */; };
 		48C8751422B5900200C41026 /* nytimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8751322B5900200C41026 /* nytimesTests.swift */; };
 		48C8751F22B5900200C41026 /* nytimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8751E22B5900200C41026 /* nytimesUITests.swift */; };
+		48C8752E22B5902400C41026 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C8752D22B5902400C41026 /* AppKit.framework */; };
+		48C8753022B5902800C41026 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C8752F22B5902800C41026 /* WebKit.framework */; };
+		48E0199222B5A1C4006369EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C8750422B5900100C41026 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		48C8751A22B5900200C41026 /* nytimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nytimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C8751E22B5900200C41026 /* nytimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nytimesUITests.swift; sourceTree = "<group>"; };
 		48C8752022B5900200C41026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C8752D22B5902400C41026 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		48C8752F22B5902800C41026 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C8753022B5902800C41026 /* WebKit.framework in Frameworks */,
+				48C8752E22B5902400C41026 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,7 @@
 				48C8751222B5900200C41026 /* nytimesTests */,
 				48C8751D22B5900200C41026 /* nytimesUITests */,
 				48C874FE22B5900100C41026 /* Products */,
+				48C8752C22B5902400C41026 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +129,15 @@
 				48C8752022B5900200C41026 /* Info.plist */,
 			);
 			path = nytimesUITests;
+			sourceTree = "<group>";
+		};
+		48C8752C22B5902400C41026 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48C8752F22B5902800C41026 /* WebKit.framework */,
+				48C8752D22B5902400C41026 /* AppKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +208,11 @@
 				TargetAttributes = {
 					48C874FC22B5900100C41026 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					48C8750E22B5900200C41026 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -228,8 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C8750522B5900100C41026 /* Assets.xcassets in Resources */,
-				48C8750822B5900100C41026 /* Main.storyboard in Resources */,
+				48E0199222B5A1C4006369EC /* Assets.xcassets in Resources */,
+				480FD55F22B5984100711C53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
